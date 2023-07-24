@@ -12,9 +12,9 @@ class NotesForm(forms.ModelForm):
             'title' :   'Task',
         }
 
-    def clean_title(self):
-        title = self.cleaned_data['title']
-        if 'Django' not in title:
-            raise ValidationError("We only takes notes that starts with django")
-        else:
-            return title
+    # def clean_title(self):
+    #     title = self.cleaned_data['title']
+    #     if 'Django' not in title:
+    #         raise ValidationError("We only takes notes that starts with django")
+    #     else:
+    #         return title

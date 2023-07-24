@@ -1,9 +1,14 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <div class="border border-primary">
+    <div class="border border-white">
         <h1>{{note.title}}</h1>
         <p>{{note.text}}</p>
         <p class="fs-6">Created on: {{note.created_on}}</p> 
+    </div>
+    <div class="border border-white">
+        <a type="button" href="{% url 'notes.list' %}" class="btn btn-primary">Back</a>
+        <a type="button" href="{% url 'notes.edit' pk=note.id %}" class="btn btn-primary">Edit</a>
+        <a type="button" href="{% url 'notes.delete' pk=note.id %}" class="btn btn-danger">Delete</a>
     </div>
 {% endblock %}
