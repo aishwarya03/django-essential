@@ -8,6 +8,7 @@ from django.views.generic.edit import DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http.response import HttpResponseRedirect
 
+
 from .forms import NotesForm
 
 # Create your views here.
